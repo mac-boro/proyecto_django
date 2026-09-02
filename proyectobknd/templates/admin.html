@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración - Biblioteca</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>⚙️ Panel de Gestión</h1>
+    <nav>
+      <a href="index.html">Catálogo y Préstamos</a>
+      <a href="admin.html" class="active">Panel de Administración</a>
+    </nav>
+  </header>
+
+  <main class="container grid-2-columns">
+    <!-- Formulario Agregar Lector -->
+    <section class="card">
+      <h2>Nuevo Lector</h2>
+      <form id="form-lector">
+        <div class="form-group">
+          <label for="nombres">Nombres:</label>
+          <input type="text" id="nombres" max_length="50" required>
+        </div>
+        <div class="form-group">
+          <label for="apellidoP">Apellido Paterno:</label>
+          <input type="text" id="apellidoP" max_length="50" required>
+        </div>
+        <div class="form-group">
+          <label for="apellidoM">Apellido Materno:</label>
+          <input type="text" id="apellidoM" max_length="50" required>
+        </div>
+        <button type="submit" class="btn-primary">Guardar Lector</button>
+      </form>
+    </section>
+
+    <!-- Formulario Agregar Autor -->
+    <section class="card">
+      <h2>Nuevo Autor</h2>
+      <form id="form-autor">
+        <div class="form-group">
+          <label for="pseudonimo">Pseudónimo / Nombre:</label>
+          <input type="text" id="pseudonimo" max_length="100" required>
+        </div>
+        <div class="form-group">
+          <label for="fNacimiento">Fecha de Nacimiento:</label>
+          <input type="date" id="fNacimiento" required>
+        </div>
+        <button type="submit" class="btn-primary">Guardar Autor</button>
+      </form>
+    </section>
+
+    <!-- Formulario Agregar Editorial -->
+    <section class="card">
+      <h2>Nueva Editorial</h2>
+      <form id="form-editorial">
+        <div class="form-group">
+          <label for="nombreEditorial">Nombre Editorial:</label>
+          <input type="text" id="nombreEditorial" max_length="100" required>
+        </div>
+        <div class="form-group">
+          <label for="fechaCreacion">Fecha de Creación:</label>
+          <input type="date" id="fechaCreacion" required>
+        </div>
+        <button type="submit" class="btn-primary">Guardar Editorial</button>
+      </form>
+    </section>
+
+    <!-- Formulario Agregar Libro -->
+    <section class="card">
+      <h2>Nuevo Libro</h2>
+      <form id="form-libro">
+        <div class="form-group">
+          <label for="titulo">Título del Libro:</label>
+          <input type="text" id="titulo" max_length="200" required>
+        </div>
+        <div class="form-group">
+          <label for="isbn">ISBN:</label>
+          <input type="text" id="isbn" max_length="20" required>
+        </div>
+        <button type="submit" class="btn-primary">Guardar Libro</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

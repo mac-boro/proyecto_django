@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Virtual</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <header>
+    <h1>📚 Biblioteca Virtual</h1>
+    <nav>
+      <a href="index.html" class="active">Catálogo y Préstamos</a>
+      <a href="admin.html">Panel de Administración</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Seccion del Catalogo de Libros -->
+    <section class="card">
+      <h2>Catálogo de Libros Disponibles</h2>
+      <button onclick="cargarCatalogo()" class="btn-secondary">Actualizar Catálogo</button>
+      <div id="grid-libros" class="grid-container"></div>
+    </section>
+
+    <!-- Seccion de Registro de Prestamo -->
+    <section class="card">
+      <h2>Solicitar Préstamo de Libro</h2>
+      <form id="form-prestamo">
+        <div class="form-group">
+          <label for="selectLector">Seleccionar Lector:</label>
+          <select id="selectLector" required>
+            <option value="">Cargando lectores...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="selectLibro">Seleccionar Libro:</label>
+          <select id="selectLibro" required>
+            <option value="">Cargando libros...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fechaDev">Fecha de Devolución:</label>
+          <input type="date" id="fechaDev" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Registrar Préstamo</button>
+      </form>
+    </section>
+
+    <!-- Seccion de Prestamos Activos -->
+    <section class="card">
+      <h2>Histórico de Préstamos</h2>
+      <ul id="lista-prestamos" class="data-list"></ul>
+    </section>
+  </main>
+
+  <script src="{% static 'app.js' %}"></script>
+</body>
+</html>
