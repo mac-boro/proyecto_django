@@ -48,3 +48,8 @@ def inicio(request):
     # Aquí puedes agregar lógica de base de datos si lo necesitas
     # Renderizamos el archivo HTML de tu frontend
     return render(request, 'index.html')
+
+def admin(request):
+    # Aquí puedes agregar lógica de base de datos si lo necesitas
+    # Renderizamos el archivo HTML de tu frontend
+    return render(request, 'admin.html')

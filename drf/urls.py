@@ -21,5 +21,6 @@ from proyectobknd import views
 urlpatterns = [
  path('admin/', admin.site.urls),
  path('proyectobknd/', include('proyectobknd.urls')),
- path('index/', views.inicio , name='inicio')
+ path('index/', views.inicio, name='inicio'),
+ path('index/admin/', views.admin, name='adminInicio')
 ]

@@ -1,17 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administración - Biblioteca</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
   <header>
     <h1>⚙️ Panel de Gestión</h1>
     <nav>
-      <a href="index.html">Catálogo y Préstamos</a>
-      <a href="admin.html" class="active">Panel de Administración</a>
+      <a href="{% url 'inicio' %}">Catálogo y Préstamos</a>
+      <a href="{% url 'adminInicio' %}" class="active">Panel de Administración</a>
     </nav>
   </header>
 
@@ -85,6 +86,6 @@
     </section>
   </main>
 
-  <script src="admin.js"></script>
+  <script src="{% static 'app.js' %}"></script>
 </body>
 </html>
